@@ -1,4 +1,4 @@
-# Mr. Freem — Portfolio
+# Mr. Freem | Portfolio
 
 Personal portfolio of **Mr. Freem**, a software development student building web applications, digital products and e-commerce businesses.
 

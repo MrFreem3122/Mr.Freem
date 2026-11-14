@@ -25,7 +25,7 @@ themeBtn.addEventListener("click", () => {
   try {
     localStorage.setItem("theme", root.classList.contains("dark") ? "dark" : "light");
   } catch (e) {
-    /* storage unavailable — the choice just won't be remembered */
+    /* storage unavailable, so the choice just won't be remembered */
   }
 });
 
