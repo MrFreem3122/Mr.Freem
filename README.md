@@ -22,7 +22,8 @@ HTML · CSS · vanilla JavaScript · EmailJS
 ├── index.html        # Page content
 ├── css/style.css     # Styles (light + dark theme, responsive rules)
 ├── js/main.js        # Theme toggle, contact form
-├── images/           # Profile photo
+├── projects/         # One detail page per project
+├── images/           # Profile photo, images/projects/ = project screenshots
 └── files/            # (to add) CV in PDF
 ```
 
@@ -39,3 +40,5 @@ npx serve .
 - [ ] Add the CV at `files/CV-Freem-Beaud.pdf` and uncomment the link in the hero
 - [ ] Add the LinkedIn link (commented out in `index.html`)
 - [ ] Link the quiz project to its own repository
+- [ ] Fill in the Carwash page (`projects/carwash.html`, lines marked TODO) and its card in `index.html`
+- [ ] Add screenshots `images/projects/raceday.jpg`, `carwash.jpg`, `quiz.jpg` (a placeholder shows until then)

@@ -353,56 +353,113 @@ ol {
   margin-bottom: 40px;
 }
 
-/* ================= WORK ================= */
+/* ================= WORK (cards) ================= */
 
 .work {
   padding-block: 96px;
 }
 
-.project {
+.project-grid {
   display: grid;
-  grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr) 130px;
-  gap: 24px 48px;
-  align-items: start;
-  padding-block: 36px;
-  border-top: 1px solid var(--line);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 56px 40px;
 }
 
-.project:last-child {
-  border-bottom: 1px solid var(--line);
+.project-card {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  border-radius: 20px;
 }
 
-.project h3 {
-  font-size: 26px;
+.project-card:focus-visible {
+  outline-offset: 8px;
+}
+
+.cover {
+  position: relative;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  border-radius: 20px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+}
+
+.cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: left top;
+  transition: transform 0.5s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.project-card:hover .cover img {
+  transform: scale(1.03);
+}
+
+/* Placeholder until a real screenshot is added */
+.cover.is-placeholder {
+  display: grid;
+  place-items: center;
+  background:
+    radial-gradient(circle at 50% 120%, var(--yellow) 0 34%, transparent 34.2%),
+    var(--surface);
+}
+
+.cover.is-placeholder img {
+  display: none;
+}
+
+.cover.is-placeholder::after {
+  content: attr(data-label);
+  font-size: clamp(24px, 3vw, 36px);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  color: var(--ink);
+  transform: translateY(-14%);
+}
+
+.project-card h3 {
+  margin-top: 22px;
+  font-size: 24px;
   line-height: 1.2;
   letter-spacing: -0.02em;
   font-weight: 700;
-  margin-bottom: 10px;
+  background-image: linear-gradient(var(--yellow), var(--yellow));
+  background-size: 0 2px;
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  transition: background-size 0.3s ease;
 }
 
-.project-main p {
+.project-card h3 {
+  display: inline-block;
+}
+
+.project-card:hover h3 {
+  background-size: 100% 2px;
+}
+
+.project-card p {
+  margin-top: 8px;
   color: var(--muted);
-  max-width: 36em;
+  max-width: 34em;
 }
 
-.project-meta {
-  display: grid;
-  gap: 10px;
-  font-size: 15px;
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 16px;
 }
 
-.project-meta div {
-  display: grid;
-  grid-template-columns: 84px 1fr;
-  gap: 12px;
-}
-
-.project-meta dt {
+.tags li {
+  font-size: 13px;
+  font-weight: 500;
+  padding: 4px 12px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
   color: var(--muted);
-}
-
-.project-meta dd {
-  margin: 0;
 }
 
 .status {
@@ -425,22 +482,153 @@ ol {
   box-shadow: 0 0 0 3px color-mix(in srgb, var(--yellow) 35%, transparent);
 }
 
-.project-links {
-  text-align: right;
+/* ================= PROJECT DETAIL PAGES ================= */
+
+.case {
+  padding-block: 40px 96px;
 }
 
-.project-links a {
+.back-link {
+  display: inline-block;
   font-size: 15px;
-  font-weight: 600;
-  text-decoration: underline;
-  text-decoration-thickness: 2px;
-  text-underline-offset: 5px;
-  text-decoration-color: var(--yellow);
-  transition: text-decoration-color 0.15s ease;
+  font-weight: 500;
+  color: var(--muted);
+  text-decoration: none;
 }
 
-.project-links a:hover {
-  text-decoration-color: currentColor;
+.back-link::before {
+  content: "";
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  margin-right: 10px;
+  border-left: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+  transform: translateY(-1px) rotate(45deg);
+}
+
+.back-link:hover {
+  color: var(--ink);
+}
+
+.case-header {
+  max-width: 760px;
+  padding-block: 40px 48px;
+}
+
+.case-header h1 {
+  font-size: clamp(42px, 6vw, 72px);
+  line-height: 1.02;
+  letter-spacing: -0.035em;
+  font-weight: 800;
+}
+
+.case-header .lede {
+  margin-top: 20px;
+}
+
+.case-meta {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  justify-content: start;
+  gap: 16px 48px;
+  margin-top: 36px;
+  font-size: 15px;
+}
+
+.case-meta dt {
+  color: var(--muted);
+  margin-bottom: 4px;
+}
+
+.case-meta dd {
+  margin: 0;
+  font-weight: 500;
+  max-width: 22em;
+}
+
+.case-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 36px;
+}
+
+.cover-large {
+  aspect-ratio: 16 / 8;
+}
+
+.case-body {
+  max-width: 680px;
+  margin-top: 72px;
+}
+
+.case-section + .case-section {
+  margin-top: 56px;
+}
+
+.case-section h2 {
+  font-size: 26px;
+  letter-spacing: -0.02em;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.case-section p + p {
+  margin-top: 14px;
+}
+
+.case-section p {
+  color: var(--muted);
+}
+
+.checklist li {
+  position: relative;
+  padding: 10px 0 10px 28px;
+  border-bottom: 1px solid var(--line);
+}
+
+.checklist li::before {
+  content: "";
+  position: absolute;
+  left: 2px;
+  top: 19px;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--yellow);
+}
+
+.next-project {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-top: 96px;
+  padding-top: 32px;
+  border-top: 1px solid var(--line);
+  text-decoration: none;
+}
+
+.next-project span {
+  font-size: 15px;
+  color: var(--muted);
+}
+
+.next-project strong {
+  font-size: clamp(32px, 4.5vw, 52px);
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  font-weight: 800;
+  align-self: flex-start;
+  background-image: linear-gradient(var(--yellow), var(--yellow));
+  background-size: 0 4px;
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  transition: background-size 0.3s ease;
+}
+
+.next-project:hover strong {
+  background-size: 100% 4px;
 }
 
 /* ================= SKILLS ================= */
@@ -612,13 +800,8 @@ ol {
 /* ================= RESPONSIVE ================= */
 
 @media (max-width: 900px) {
-  .project {
+  .case-meta {
     grid-template-columns: 1fr;
-    gap: 18px;
-  }
-
-  .project-links {
-    text-align: left;
   }
 
   .skill-columns {
@@ -660,8 +843,21 @@ ol {
     padding-block: 64px;
   }
 
-  .project h3 {
+  .project-grid {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+
+  .project-card h3 {
     font-size: 22px;
+  }
+
+  .cover-large {
+    aspect-ratio: 16 / 10;
+  }
+
+  .case-header {
+    padding-block: 28px 36px;
   }
 
   .skills {

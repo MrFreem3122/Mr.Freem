@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Carwash — Mr. Freem</title>
+  <meta name="description" content="TODO: one or two sentences on what the Carwash project is and who it is for." />
+  <meta name="theme-color" content="#ffffff" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Carwash — Mr. Freem" />
+  <meta property="og:description" content="TODO: one or two sentences on what the Carwash project is and who it is for." />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><circle cx='32' cy='32' r='32' fill='%23F7CB48'/><text x='50%' y='56%' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-weight='700' font-size='34' fill='%2316181d'>F</text></svg>" />
+  <script>
+    (function () {
+      try {
+        var saved = localStorage.getItem("theme");
+        if (saved === "dark" || (!saved && matchMedia("(prefers-color-scheme: dark)").matches)) {
+          document.documentElement.classList.add("dark");
+        }
+      } catch (e) {}
+    })();
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="../index.html">Mr. Freem</a>
+    <nav class="nav" aria-label="Main navigation">
+      <a href="../index.html#work">Work</a>
+      <a href="../index.html#skills">Skills</a>
+      <a href="../index.html#contact">Contact</a>
+    </nav>
+    <button type="button" class="theme-btn" id="themeToggle" aria-label="Switch to dark mode" aria-pressed="false">
+      <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+      <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.5"/><path d="M12 1.5v3M12 19.5v3M4.6 4.6l2.1 2.1M17.3 17.3l2.1 2.1M1.5 12h3M19.5 12h3M4.6 19.4l2.1-2.1M17.3 6.7l2.1-2.1"/></svg>
+    </button>
+  </div>
+</header>
+
+<!-- TODO: every line marked TODO below needs your real Carwash content -->
+<main id="main" class="case container">
+
+  <a class="back-link" href="../index.html#work">All projects</a>
+
+  <header class="case-header">
+    <h1>Carwash</h1>
+    <p class="lede">TODO: one or two sentences on what the Carwash project is and who it is for.</p>
+
+    <dl class="case-meta">
+      <div><dt>Type</dt><dd>TODO</dd></div>
+      <div><dt>Built with</dt><dd>TODO</dd></div>
+      <div><dt>Status</dt><dd><span class="status">TODO</span></dd></div>
+    </dl>
+
+  </header>
+
+  <!-- Screenshot: images/projects/carwash.jpg (a placeholder shows until it exists) -->
+  <div class="cover cover-large" data-label="Carwash">
+    <img src="../images/projects/carwash.jpg" alt="Screenshot of Carwash" />
+  </div>
+
+  <div class="case-body">
+      <section class="case-section">
+        <h2>About the project</h2>
+        <p>TODO: describe the project — the problem it solves, how it works and what you built.</p>
+      </section>
+
+      <section class="case-section">
+        <h2>What I built</h2>
+        <ul class="checklist">
+          <li>TODO: main feature 1</li>
+          <li>TODO: main feature 2</li>
+          <li>TODO: main feature 3</li>
+        </ul>
+      </section>
+  </div>
+
+  <a class="next-project" href="quiz.html">
+    <span>Next project</span>
+    <strong>Multiplayer quiz</strong>
+  </a>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <p>© <span id="year"></span> Mr. Freem</p>
+    <a href="#main">Back to top</a>
+  </div>
+</footer>
+
+<script src="../js/main.js"></script>
+</body>
+</html>

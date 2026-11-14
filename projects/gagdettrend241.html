@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GadgetTrend 241 — Mr. Freem</title>
+  <meta name="description" content="An online store selling trending tech gadgets to customers in Gabon. I run the business and built the website myself." />
+  <meta name="theme-color" content="#ffffff" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="GadgetTrend 241 — Mr. Freem" />
+  <meta property="og:description" content="An online store selling trending tech gadgets to customers in Gabon. I run the business and built the website myself." />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><circle cx='32' cy='32' r='32' fill='%23F7CB48'/><text x='50%' y='56%' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-weight='700' font-size='34' fill='%2316181d'>F</text></svg>" />
+  <script>
+    (function () {
+      try {
+        var saved = localStorage.getItem("theme");
+        if (saved === "dark" || (!saved && matchMedia("(prefers-color-scheme: dark)").matches)) {
+          document.documentElement.classList.add("dark");
+        }
+      } catch (e) {}
+    })();
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="../index.html">Mr. Freem</a>
+    <nav class="nav" aria-label="Main navigation">
+      <a href="../index.html#work">Work</a>
+      <a href="../index.html#skills">Skills</a>
+      <a href="../index.html#contact">Contact</a>
+    </nav>
+    <button type="button" class="theme-btn" id="themeToggle" aria-label="Switch to dark mode" aria-pressed="false">
+      <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+      <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.5"/><path d="M12 1.5v3M12 19.5v3M4.6 4.6l2.1 2.1M17.3 17.3l2.1 2.1M1.5 12h3M19.5 12h3M4.6 19.4l2.1-2.1M17.3 6.7l2.1-2.1"/></svg>
+    </button>
+  </div>
+</header>
+
+<main id="main" class="case container">
+
+  <a class="back-link" href="../index.html#work">All projects</a>
+
+  <header class="case-header">
+    <h1>GadgetTrend 241</h1>
+    <p class="lede">An online store selling trending tech gadgets to customers in Gabon. I run the business and built the website myself.</p>
+
+    <dl class="case-meta">
+      <div><dt>Type</dt><dd>My own business</dd></div>
+      <div><dt>Built with</dt><dd>Next.js, PostgreSQL (Neon), Vercel</dd></div>
+      <div><dt>Status</dt><dd><span class="status status-live">Test version online</span></dd></div>
+    </dl>
+
+      <div class="case-actions">
+        <a class="btn btn-solid" href="https://gagdettrend241-tgey.vercel.app/" target="_blank" rel="noopener noreferrer">Visit the store</a>
+      </div>
+  </header>
+
+  <!-- Screenshot: images/projects/gagdettrend241.jpg (a placeholder shows until it exists) -->
+  <div class="cover cover-large" data-label="GadgetTrend 241">
+    <img src="../images/projects/gagdettrend241.jpg" alt="Screenshot of GadgetTrend 241" />
+  </div>
+
+  <div class="case-body">
+      <section class="case-section">
+        <h2>About the project</h2>
+        <p>GadgetTrend 241 started as an e-commerce business: I source gadgets from suppliers, test which products people want, and sell them online. The website is where customers browse the catalogue and place their orders.</p>
+        <p>The front end and the back end both live in one Next.js app, with orders and products stored in a PostgreSQL database hosted on Neon. A test version is deployed on Vercel while I finish the remaining features.</p>
+      </section>
+
+      <section class="case-section">
+        <h2>What I built</h2>
+        <ul class="checklist">
+          <li>Product catalogue with categories and search</li>
+          <li>Cart and checkout in the shop's own colours</li>
+          <li>Customer accounts</li>
+          <li>Orders saved in a PostgreSQL database</li>
+          <li>Deployment on Vercel with a Neon database</li>
+        </ul>
+      </section>
+
+      <section class="case-section">
+        <h2>Coming next</h2>
+        <ul class="checklist">
+          <li>An admin dashboard to manage orders, products, stock, customers and deliveries</li>
+          <li>New-order alerts by email and WhatsApp</li>
+          <li>Online payment with Mobile Money (Airtel Money, Moov) and bank card</li>
+        </ul>
+      </section>
+  </div>
+
+  <a class="next-project" href="raceday.html">
+    <span>Next project</span>
+    <strong>RaceDay</strong>
+  </a>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <p>© <span id="year"></span> Mr. Freem</p>
+    <a href="#main">Back to top</a>
+  </div>
+</footer>
+
+<script src="../js/main.js"></script>
+</body>
+</html>

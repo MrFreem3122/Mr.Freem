@@ -36,54 +36,66 @@ const onScroll = () => header.classList.toggle("is-scrolled", window.scrollY > 8
 onScroll();
 window.addEventListener("scroll", onScroll, { passive: true });
 
+/* ================= PROJECT COVERS ================= */
+// Until a screenshot exists, show a clean placeholder with the project name.
+
+document.querySelectorAll(".cover img").forEach((img) => {
+  const showPlaceholder = () => img.parentElement.classList.add("is-placeholder");
+  if (img.complete && img.naturalWidth === 0) showPlaceholder();
+  img.addEventListener("error", showPlaceholder);
+});
+
 /* ================= CONTACT FORM ================= */
 
 const form = document.getElementById("contactForm");
-const btn = document.getElementById("sendBtn");
-const status = document.getElementById("formStatus");
-const BTN_LABEL = btn.textContent;
 
-function setStatus(message, type) {
-  status.textContent = message;
-  status.className = "form-status" + (type ? " " + type : "");
-}
+if (form) {
+  const btn = document.getElementById("sendBtn");
+  const status = document.getElementById("formStatus");
+  const BTN_LABEL = btn.textContent;
 
-if (window.emailjs) {
-  emailjs.init({ publicKey: EMAILJS_PUBLIC_KEY });
-}
-
-form.addEventListener("submit", (e) => {
-  e.preventDefault();
-
-  if (!form.checkValidity()) {
-    form.reportValidity();
-    return;
+  function setStatus(message, type) {
+    status.textContent = message;
+    status.className = "form-status" + (type ? " " + type : "");
   }
 
-  if (!window.emailjs) {
-    setStatus("The form couldn't load. Email me at contact.mrfreem@gmail.com instead.", "error");
-    return;
+  if (window.emailjs) {
+    emailjs.init({ publicKey: EMAILJS_PUBLIC_KEY });
   }
 
-  btn.disabled = true;
-  btn.textContent = "Sending…";
-  setStatus("");
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
 
-  emailjs
-    .sendForm(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, form)
-    .then(() => {
-      setStatus("Message sent. I'll reply by email soon.", "success");
-      form.reset();
-    })
-    .catch((error) => {
-      console.error("EmailJS error:", error);
-      setStatus("Message not sent. Check your connection and try again, or email me directly.", "error");
-    })
-    .finally(() => {
-      btn.disabled = false;
-      btn.textContent = BTN_LABEL;
-    });
-});
+    if (!form.checkValidity()) {
+      form.reportValidity();
+      return;
+    }
+
+    if (!window.emailjs) {
+      setStatus("The form couldn't load. Email me at contact.mrfreem@gmail.com instead.", "error");
+      return;
+    }
+
+    btn.disabled = true;
+    btn.textContent = "Sending…";
+    setStatus("");
+
+    emailjs
+      .sendForm(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, form)
+      .then(() => {
+        setStatus("Message sent. I'll reply by email soon.", "success");
+        form.reset();
+      })
+      .catch((error) => {
+        console.error("EmailJS error:", error);
+        setStatus("Message not sent. Check your connection and try again, or email me directly.", "error");
+      })
+      .finally(() => {
+        btn.disabled = false;
+        btn.textContent = BTN_LABEL;
+      });
+  });
+}
 
 /* ================= FOOTER YEAR ================= */
 
