@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Multiplayer quiz | Mr. Freem</title>
-  <meta name="description" content="A real-time quiz game. A host starts a session, players join from their own device with a code, and everyone sees questions and scores update live." />
+  <title>OtaKu Quiz | Mr. Freem</title>
+  <meta name="description" content="A live quiz game for my otaku friends. One person hosts, everyone else joins from their own phone with a code shared on WhatsApp, from anywhere." />
   <meta name="theme-color" content="#ffffff" />
   <meta property="og:type" content="article" />
-  <meta property="og:title" content="Multiplayer quiz | Mr. Freem" />
-  <meta property="og:description" content="A real-time quiz game. A host starts a session, players join from their own device with a code, and everyone sees questions and scores update live." />
+  <meta property="og:title" content="OtaKu Quiz | Mr. Freem" />
+  <meta property="og:description" content="A live quiz game for my otaku friends. One person hosts, everyone else joins from their own phone with a code shared on WhatsApp, from anywhere." />
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><circle cx='32' cy='32' r='32' fill='%23F7CB48'/><text x='50%' y='56%' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-weight='700' font-size='34' fill='%2316181d'>F</text></svg>" />
   <script>
     (function () {
@@ -49,40 +49,62 @@
   <a class="back-link" href="../index.html#work">All projects</a>
 
   <header class="case-header">
-    <h1>Multiplayer quiz</h1>
-    <p class="lede">A real-time quiz game. A host starts a session, players join from their own device with a code, and everyone sees questions and scores update live.</p>
+    <h1>OtaKu Quiz</h1>
+    <p class="lede">A live quiz game for my otaku friends. One person hosts, everyone else joins from their own phone with a code shared on WhatsApp, from anywhere.</p>
 
     <dl class="case-meta">
       <div><dt>Type</dt><dd>Personal project</dd></div>
-      <div><dt>Built with</dt><dd>HTML, CSS, JavaScript, Node.js, WebSockets</dd></div>
-      <div><dt>Status</dt><dd><span class="status">Completed</span></dd></div>
+      <div><dt>Built with</dt><dd>JavaScript, Node.js, WebSockets, HTML, CSS, Render</dd></div>
+      <div><dt>Status</dt><dd><span class="status status-live">Online</span></dd></div>
     </dl>
 
       <div class="case-actions">
-        <a class="btn btn-solid" href="https://github.com/MrFreem3122" target="_blank" rel="noopener noreferrer">View on GitHub</a>
+        <a class="btn btn-solid" href="https://otakuquiz-zlnr.onrender.com" target="_blank" rel="noopener noreferrer">Play the game</a>
+        <a class="btn btn-ghost" href="https://github.com/MrFreem3122/OtakuQuiz" target="_blank" rel="noopener noreferrer">View the code</a>
       </div>
   </header>
 
   <!-- Screenshot: images/projects/quiz.jpg (a placeholder shows until it exists) -->
-  <div class="cover cover-large" data-label="Multiplayer quiz">
-    <img src="../images/projects/quiz.jpg" alt="Screenshot of Multiplayer quiz" />
+  <div class="cover cover-large" data-label="OtaKu Quiz">
+    <img src="../images/projects/quiz.jpg" alt="Screenshot of OtaKu Quiz" />
   </div>
 
+  <div class="gallery">
+    <figure>
+      <img src="../images/projects/quiz-lobby.jpg" alt="Host lobby with the game code and the waiting room on a player&#x27;s phone" loading="lazy" />
+      <figcaption>Host lobby with the game code and the waiting room on a player's phone</figcaption>
+    </figure>
+    <figure>
+      <img src="../images/projects/quiz-review.jpg" alt="The host validates free-text answers, players see their points" loading="lazy" />
+      <figcaption>The host validates free-text answers, players see their points</figcaption>
+    </figure>
+  </div>
 
   <div class="case-body">
       <section class="case-section">
         <h2>About the project</h2>
-        <p>The game master creates a quiz session and gets a unique code. Players enter that code to join, then answer each question as it appears on their screen.</p>
-        <p>A Node.js server keeps every player in sync over WebSockets, so questions, answers and the scoreboard update instantly without refreshing the page.</p>
+        <p>Running quizzes for our otaku community meant a lot of manual work: reading questions out, collecting answers and counting points for every player. I designed OtaKu Quiz in Figma and built it so we can play together even when everyone is at home, or in a different country.</p>
+        <p>The host builds a quiz with multiple choice, true or false and free-text questions, then shares a code. Players answer on their phones against a timer and score more for faster answers. The server keeps the answers private and pushes every question, result and leaderboard to all players in real time.</p>
       </section>
 
       <section class="case-section">
         <h2>What I built</h2>
         <ul class="checklist">
-          <li>Session creation with a unique join code</li>
-          <li>Players joining from any device</li>
-          <li>Live questions and answers over WebSockets</li>
-          <li>Real-time scoreboard</li>
+          <li>Quiz editor with three question types, images and a timer per question</li>
+          <li>Game rooms with a 4-letter code and a WhatsApp share link</li>
+          <li>Real-time play over WebSockets, with a server written from scratch and no dependencies</li>
+          <li>Speed-based scoring, a leaderboard after each question and a final podium</li>
+          <li>Free-text answers checked without case or accents, with manual validation by the host</li>
+          <li>Automatic reconnection: players who reload or lose signal come back with their score</li>
+          <li>Deployed on Render</li>
+        </ul>
+      </section>
+
+      <section class="case-section">
+        <h2>Coming next</h2>
+        <ul class="checklist">
+          <li>Accounts so quizzes are saved online</li>
+          <li>A Werewolf (Loup-Garou) game built on the same rooms and players system</li>
         </ul>
       </section>
   </div>
