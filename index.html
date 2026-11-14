@@ -2,114 +2,143 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Mr. Freem</title>
-  <link rel="stylesheet" href="css/maincss.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mr. Freem — Software Development Student & E-commerce Builder</title>
+  <meta name="description" content="Portfolio of Mr. Freem, a software development student building web applications, digital products and e-commerce businesses." />
+  <meta name="author" content="Freem Beaud" />
+  <meta name="theme-color" content="#F7CB48" />
+
+  <!-- Open Graph (link previews on WhatsApp, LinkedIn, etc.) -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Mr. Freem — Portfolio" />
+  <meta property="og:description" content="Software Development Student building digital products & e-commerce businesses." />
+  <meta property="og:url" content="https://mr-freem.vercel.app/" />
+  <meta property="og:image" content="https://mr-freem.vercel.app/images/profil.jpeg" />
+
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='14' fill='%23F7CB48'/><text x='50%' y='54%' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-weight='700' font-size='40' fill='%230f0f0f'>F</text></svg>" />
+
+  <!-- Apply the saved theme before the page paints (prevents a white flash in dark mode) -->
+  <script>
+    (function () {
+      try {
+        var saved = localStorage.getItem("theme");
+        var prefersDark = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
+        if (saved === "dark" || (!saved && prefersDark)) {
+          document.documentElement.classList.add("dark");
+        }
+      } catch (e) {}
+    })();
+  </script>
+
+  <link rel="stylesheet" href="css/maincss.css" />
 </head>
 <body>
 
+<a class="skip-link" href="#main">Skip to content</a>
+
 <!-- NAVBAR -->
 <header class="navbar">
-  <div><a class="logo" href="#home">MrFreem.com</a></div>
-  <nav>
-    <a href="#skills">Skills & expertise</a>
-    <a href="#projects">Featured projects</a>
-    <a href="#projects">Courses</a>
-    <a href="#contact">Contact Me</a>
+  <a class="logo" href="#home">MrFreem.com</a>
+
+  <nav aria-label="Main navigation">
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
   </nav>
+
+  <!-- Dark / light mode toggle -->
+  <button type="button" class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" aria-pressed="false">
+    <span class="toggle-icon" aria-hidden="true"></span>
+    <span class="toggle-ball" aria-hidden="true"></span>
+  </button>
 </header>
+
+<main id="main">
 
 <!-- HERO -->
 <section id="home" class="hero">
-
-            <!-- dark & light mode bouton -->
-
-        <div class="theme-toggle">
-            <input type="checkbox" id="darkToggle">
-              <label for="darkToggle" class="toggle-label">
-                <span class="toggle-icon"></span>
-                <span class="toggle-ball"></span>
-              </label>
-        </div>
-
-
-        <div class="hero-text">
-          <h1>Hi, I am <span>Mr. Freem</span></h1>
-          <p>Software Development Student building digital products & e-commerce businesses</p>
+  <div class="hero-text">
+    <h1>Hi, I am <span>Mr. Freem</span></h1>
+    <p>Software Development Student building digital products &amp; e-commerce businesses.</p>
 
     <!-- SOCIAL LINKS -->
     <div class="socials">
-      <a href="https://github.com/MrFreem3122" target="_blank" class="social-btn">
-        <img id="githubIcon" src="images/github.svg" alt="GitHub">
+      <a href="https://github.com/MrFreem3122" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="GitHub profile">
+        <img src="images/github.svg" data-light="images/github.svg" data-dark="images/github-dark.svg" alt="" width="22" height="22" />
       </a>
 
-      <a href="https://instagram.com/TON-INSTAGRAM" target="_blank" class="social-btn">
-        <img id="instgamIcon" src="images/instagram.svg" alt="Instagram">
+      <a href="mailto:contact.mrfreem@gmail.com" class="social-btn" aria-label="Send me an email">
+        <img src="images/gmail.svg" data-light="images/gmail.svg" data-dark="images/gmail-dark.svg" alt="" width="22" height="22" />
       </a>
 
-      <a href="https://mail.google.com/mail/?view=cm&to=contact.mrfreem@gmail.com" class="social-btn">
-        <img id="gmailIcon" src="images/gmail.svg" alt="Email">
+      <!-- TODO: put your real Instagram username, then remove the comment around this link
+      <a href="https://instagram.com/YOUR_USERNAME" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Instagram profile">
+        <img src="images/instagram.svg" data-light="images/instagram.svg" data-dark="images/instagram-dark.svg" alt="" width="22" height="22" />
       </a>
+      -->
 
-      <a href="" class="social-btn">
-        <img id="linkedinIcon" src="images/linkedin.svg" alt="linkedin">
+      <!-- TODO: put your real LinkedIn URL, then remove the comment around this link
+      <a href="https://www.linkedin.com/in/YOUR_PROFILE" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="LinkedIn profile">
+        <img src="images/linkedin.svg" data-light="images/linkedin.svg" data-dark="images/linkedin-dark.svg" alt="" width="22" height="22" />
       </a>
+      -->
     </div>
 
     <!-- CTA -->
     <div class="buttons">
       <a href="#projects" class="btn-primary">View my work</a>
       <a href="#contact" class="btn-secondary">Get in touch</a>
-
     </div>
 
+    <!-- TODO: add your CV as files/CV-Freem-Beaud.pdf, then remove the comment around this block
     <div class="download-bouton">
-      <a href="#contact" class="btn-download">
-       <span> <img id="downloadIcon" src="images/download.svg" alt="download"></span>
-        <span class="text-main">Download My</span>
-        <span class="text-accent">Cv</span>
+      <a href="files/CV-Freem-Beaud.pdf" class="btn-download" download>
+        <img src="images/download.svg" data-light="images/download.svg" data-dark="images/download-dark.svg" alt="" width="23" height="23" />
+        <span class="text-main">Download my</span>
+        <span class="text-accent">CV</span>
       </a>
     </div>
+    -->
   </div>
 
   <div class="hero-image">
-    <img src="images/profil.jpeg" alt="Profile">
+    <img src="images/profil.jpeg" alt="Portrait of Mr. Freem" width="280" height="420" />
   </div>
 </section>
 
 
 <!-- SKILLS -->
 <section id="skills" class="skills">
-  <h2>Skills & Expertise</h2>
+  <h2>Skills &amp; Expertise</h2>
 
   <div class="skill-grid">
     <div class="skill-card">
-      <h3> Development</h3>
+      <h3>Development</h3>
       <ul>
         <li>Web Development (HTML, CSS, JavaScript)</li>
         <li>Java</li>
         <li>C#</li>
         <li>React (learning)</li>
-        <li>Git & GitHub</li>
+        <li>Git &amp; GitHub</li>
       </ul>
     </div>
 
     <div class="skill-card">
-      <h3> E-commerce</h3>
+      <h3>E-commerce</h3>
       <ul>
         <li>Product sourcing (Alibaba, suppliers)</li>
         <li>Shopify store setup</li>
-        <li>Meta Ads (Facebook & Instagram)</li>
-        <li>Product testing & validation</li>
-        <li>Order & customer management</li>
+        <li>Meta Ads (Facebook &amp; Instagram)</li>
+        <li>Product testing &amp; validation</li>
+        <li>Order &amp; customer management</li>
       </ul>
     </div>
 
     <div class="skill-card">
-      <h3> Business</h3>
+      <h3>Business</h3>
       <ul>
         <li>Online business fundamentals</li>
-        <li>Pricing & offer positioning</li>
+        <li>Pricing &amp; offer positioning</li>
         <li>Basic marketing strategy</li>
         <li>Problem-solving mindset</li>
         <li>Project planning</li>
@@ -117,7 +146,7 @@
     </div>
 
     <div class="skill-card">
-      <h3> Product & Tools</h3>
+      <h3>Product &amp; Tools</h3>
       <ul>
         <li>Figma (UI mockups)</li>
         <li>Canva</li>
@@ -134,14 +163,15 @@
 
   <div class="projects-grid">
 
-    <div class="project-card">
-      <div class="project-image">
-        <img src="images/quiz-project.png" alt="Multiplayer Quiz App">
+    <article class="project-card">
+      <!-- Add a screenshot at images/quiz-project.png — until then a placeholder is shown -->
+      <div class="project-image" data-label="Quiz App">
+        <img src="images/quiz-project.png" alt="Screenshot of the multiplayer quiz app" loading="lazy" />
       </div>
 
       <h3>Multiplayer Quiz Web Application</h3>
       <p>Real-time quiz web application where a game master creates a session and players join using a unique code.</p>
-      
+
       <div class="tech">
         <span>HTML</span>
         <span>CSS</span>
@@ -150,28 +180,27 @@
         <span>WebSockets</span>
       </div>
 
-      <button class="btn-primary">View project</button>
-    </div>
+      <!-- TODO: replace the href with the project's GitHub repo or live demo -->
+      <a class="btn-primary project-link" href="https://github.com/MrFreem3122" target="_blank" rel="noopener noreferrer">View on GitHub</a>
+    </article>
 
-    <div class="project-card">
-      <div class="project-image">
-        <img src="images/product-testing.png" alt="E-commerce Product Testing">
+    <article class="project-card">
+      <div class="project-image" data-label="Product Testing">
+        <img src="images/product-testing.png" alt="Ads dashboard from the product testing campaign" loading="lazy" />
       </div>
 
       <h3>E-commerce Product Testing</h3>
-      <p>Validated product demand before scaling</p>
+      <p>Ran Meta Ads campaigns to validate product demand before investing in stock and scaling.</p>
 
       <div class="tech">
         <span>Meta Ads</span>
         <span>Business Suite</span>
       </div>
+    </article>
 
-      <button class="btn-primary">View project</button>
-    </div>
-
-    <div class="project-card">
-      <div class="project-image">
-        <img src="images/hoodies-store.png" alt="Embroidered Hoodies Website">
+    <article class="project-card">
+      <div class="project-image" data-label="Hoodies Store">
+        <img src="images/hoodies-store.png" alt="Homepage of the embroidered hoodies store" loading="lazy" />
       </div>
 
       <h3>Embroidered Hoodies E-commerce Website</h3>
@@ -183,8 +212,9 @@
         <span>JavaScript</span>
       </div>
 
-      <button class="btn-primary">View project</button>
-    </div>
+      <!-- TODO: replace the href with the project's GitHub repo or live demo -->
+      <a class="btn-primary project-link" href="https://github.com/MrFreem3122" target="_blank" rel="noopener noreferrer">View on GitHub</a>
+    </article>
 
   </div>
 </section>
@@ -194,22 +224,33 @@
 <section id="contact" class="contact">
   <h2>Contact Me</h2>
 
-  <form class="contact-form" id="contactForm">
-    <input type="text" name="name" placeholder="Name" required>
-    <input type="email" name="email" placeholder="Email" required>
-    <input type="text" name="subject" placeholder="Subject">
-    <textarea name="message" placeholder="Message" required></textarea>
+  <form class="contact-form" id="contactForm" novalidate>
+    <label class="sr-only" for="name">Name</label>
+    <input type="text" id="name" name="name" placeholder="Name" autocomplete="name" required />
 
-    <button type="submit" class="btn-primary" id="sendBtn">
-      Send Message ✉️
-    </button>
+    <label class="sr-only" for="email">Email</label>
+    <input type="email" id="email" name="email" placeholder="Email" autocomplete="email" required />
+
+    <label class="sr-only" for="subject">Subject</label>
+    <input type="text" id="subject" name="subject" placeholder="Subject" />
+
+    <label class="sr-only" for="message">Message</label>
+    <textarea id="message" name="message" placeholder="Message" required></textarea>
+
+    <button type="submit" class="btn-primary" id="sendBtn">Send Message ✉️</button>
+
+    <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
   </form>
 </section>
 
-<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-<script>emailjs.init("C-CRLw9gJAAzkTbBW");</script>
-<script src="/js/main.js"></script>
+</main>
 
+<footer class="footer">
+  <p>© <span id="year"></span> Mr. Freem · Built with HTML, CSS &amp; JavaScript</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script src="js/main.js"></script>
 
 </body>
 </html>
