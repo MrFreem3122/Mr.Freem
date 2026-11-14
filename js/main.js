@@ -6,43 +6,35 @@ const EMAILJS_TEMPLATE_ID = "template_9y7b94e";
 
 const root = document.documentElement;
 
-/* ================= THEME (dark / light) ================= */
+/* ================= THEME ================= */
 
-const toggle = document.getElementById("themeToggle");
+const themeBtn = document.getElementById("themeToggle");
 
-function updateIcons(isDark) {
-  document.querySelectorAll("img[data-light][data-dark]").forEach((img) => {
-    img.src = isDark ? img.dataset.dark : img.dataset.light;
-  });
+function syncThemeButton() {
+  const isDark = root.classList.contains("dark");
+  themeBtn.setAttribute("aria-pressed", String(isDark));
+  themeBtn.setAttribute("aria-label", isDark ? "Switch to light mode" : "Switch to dark mode");
+  document.querySelector('meta[name="theme-color"]').setAttribute("content", isDark ? "#121316" : "#ffffff");
 }
 
-function applyTheme(isDark) {
-  root.classList.toggle("dark", isDark);
-  toggle.setAttribute("aria-pressed", String(isDark));
-  updateIcons(isDark);
-}
+syncThemeButton();
 
-// The inline script in <head> already set the class; sync the button and icons with it
-applyTheme(root.classList.contains("dark"));
-
-toggle.addEventListener("click", () => {
-  const isDark = !root.classList.contains("dark");
-  applyTheme(isDark);
+themeBtn.addEventListener("click", () => {
+  root.classList.toggle("dark");
+  syncThemeButton();
   try {
-    localStorage.setItem("theme", isDark ? "dark" : "light");
+    localStorage.setItem("theme", root.classList.contains("dark") ? "dark" : "light");
   } catch (e) {
-    /* storage unavailable (private mode) — theme just won't be remembered */
+    /* storage unavailable — the choice just won't be remembered */
   }
 });
 
-/* ================= PROJECT IMAGES ================= */
-// If a screenshot is missing, show a clean placeholder instead of a broken image icon.
+/* ================= HEADER BORDER ON SCROLL ================= */
 
-document.querySelectorAll(".project-image img").forEach((img) => {
-  const showPlaceholder = () => img.parentElement.classList.add("is-placeholder");
-  if (img.complete && img.naturalWidth === 0) showPlaceholder();
-  img.addEventListener("error", showPlaceholder);
-});
+const header = document.querySelector(".site-header");
+const onScroll = () => header.classList.toggle("is-scrolled", window.scrollY > 8);
+onScroll();
+window.addEventListener("scroll", onScroll, { passive: true });
 
 /* ================= CONTACT FORM ================= */
 
@@ -69,23 +61,23 @@ form.addEventListener("submit", (e) => {
   }
 
   if (!window.emailjs) {
-    setStatus("The form is unavailable right now. Please email me at contact.mrfreem@gmail.com.", "error");
+    setStatus("The form couldn't load. Email me at contact.mrfreem@gmail.com instead.", "error");
     return;
   }
 
   btn.disabled = true;
-  btn.textContent = "Sending...";
+  btn.textContent = "Sending…";
   setStatus("");
 
   emailjs
     .sendForm(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, form)
     .then(() => {
-      setStatus("Thanks! Your message has been sent. I'll get back to you soon.", "success");
+      setStatus("Message sent. I'll reply by email soon.", "success");
       form.reset();
     })
     .catch((error) => {
       console.error("EmailJS error:", error);
-      setStatus("Sorry, the message could not be sent. Please try again or email me directly.", "error");
+      setStatus("Message not sent. Check your connection and try again, or email me directly.", "error");
     })
     .finally(() => {
       btn.disabled = false;

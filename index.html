@@ -3,254 +3,255 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mr. Freem — Software Development Student & E-commerce Builder</title>
-  <meta name="description" content="Portfolio of Mr. Freem, a software development student building web applications, digital products and e-commerce businesses." />
+  <title>Mr. Freem — Web apps &amp; online stores</title>
+  <meta name="description" content="Mr. Freem is a software development student who builds web applications with ASP.NET Core and Next.js, and runs online stores." />
   <meta name="author" content="Freem Beaud" />
-  <meta name="theme-color" content="#F7CB48" />
+  <meta name="theme-color" content="#ffffff" />
 
-  <!-- Open Graph (link previews on WhatsApp, LinkedIn, etc.) -->
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Mr. Freem — Portfolio" />
-  <meta property="og:description" content="Software Development Student building digital products & e-commerce businesses." />
+  <meta property="og:title" content="Mr. Freem — Web apps &amp; online stores" />
+  <meta property="og:description" content="Software development student building web applications and e-commerce businesses." />
   <meta property="og:url" content="https://mr-freem.vercel.app/" />
   <meta property="og:image" content="https://mr-freem.vercel.app/images/profil.jpeg" />
 
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='14' fill='%23F7CB48'/><text x='50%' y='54%' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-weight='700' font-size='40' fill='%230f0f0f'>F</text></svg>" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><circle cx='32' cy='32' r='32' fill='%23F7CB48'/><text x='50%' y='56%' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-weight='700' font-size='34' fill='%2316181d'>F</text></svg>" />
 
-  <!-- Apply the saved theme before the page paints (prevents a white flash in dark mode) -->
   <script>
     (function () {
       try {
         var saved = localStorage.getItem("theme");
-        var prefersDark = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
-        if (saved === "dark" || (!saved && prefersDark)) {
+        if (saved === "dark" || (!saved && matchMedia("(prefers-color-scheme: dark)").matches)) {
           document.documentElement.classList.add("dark");
         }
       } catch (e) {}
     })();
   </script>
 
-  <link rel="stylesheet" href="css/maincss.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
 
 <a class="skip-link" href="#main">Skip to content</a>
 
-<!-- NAVBAR -->
-<header class="navbar">
-  <a class="logo" href="#home">MrFreem.com</a>
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="#top">Mr. Freem</a>
 
-  <nav aria-label="Main navigation">
-    <a href="#skills">Skills</a>
-    <a href="#projects">Projects</a>
-    <a href="#contact">Contact</a>
-  </nav>
+    <nav class="nav" aria-label="Main navigation">
+      <a href="#work">Work</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+    </nav>
 
-  <!-- Dark / light mode toggle -->
-  <button type="button" class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" aria-pressed="false">
-    <span class="toggle-icon" aria-hidden="true"></span>
-    <span class="toggle-ball" aria-hidden="true"></span>
-  </button>
+    <button type="button" class="theme-btn" id="themeToggle" aria-label="Switch to dark mode" aria-pressed="false">
+      <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+      <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.5"/><path d="M12 1.5v3M12 19.5v3M4.6 4.6l2.1 2.1M17.3 17.3l2.1 2.1M1.5 12h3M19.5 12h3M4.6 19.4l2.1-2.1M17.3 6.7l2.1-2.1"/></svg>
+    </button>
+  </div>
 </header>
 
 <main id="main">
 
-<!-- HERO -->
-<section id="home" class="hero">
-  <div class="hero-text">
-    <h1>Hi, I am <span>Mr. Freem</span></h1>
-    <p>Software Development Student building digital products &amp; e-commerce businesses.</p>
+  <!-- HERO -->
+  <section class="hero container" id="top">
+    <div class="hero-copy">
+      <p class="hello">Hi, I'm Freem.</p>
+      <h1>I build web apps and run online stores.</h1>
+      <p class="lede">
+        Software development student working with C#, ASP.NET Core and Next.js —
+        and running my own e-commerce shop, from sourcing products to the checkout page.
+      </p>
 
-    <!-- SOCIAL LINKS -->
-    <div class="socials">
-      <a href="https://github.com/MrFreem3122" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="GitHub profile">
-        <img src="images/github.svg" data-light="images/github.svg" data-dark="images/github-dark.svg" alt="" width="22" height="22" />
-      </a>
+      <div class="hero-actions">
+        <a class="btn btn-solid" href="#work">See my work</a>
+        <a class="btn btn-ghost" href="mailto:contact.mrfreem@gmail.com">Email me</a>
+      </div>
 
-      <a href="mailto:contact.mrfreem@gmail.com" class="social-btn" aria-label="Send me an email">
-        <img src="images/gmail.svg" data-light="images/gmail.svg" data-dark="images/gmail-dark.svg" alt="" width="22" height="22" />
-      </a>
-
-      <!-- TODO: put your real Instagram username, then remove the comment around this link
-      <a href="https://instagram.com/YOUR_USERNAME" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Instagram profile">
-        <img src="images/instagram.svg" data-light="images/instagram.svg" data-dark="images/instagram-dark.svg" alt="" width="22" height="22" />
-      </a>
-      -->
-
-      <!-- TODO: put your real LinkedIn URL, then remove the comment around this link
-      <a href="https://www.linkedin.com/in/YOUR_PROFILE" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="LinkedIn profile">
-        <img src="images/linkedin.svg" data-light="images/linkedin.svg" data-dark="images/linkedin-dark.svg" alt="" width="22" height="22" />
-      </a>
-      -->
-    </div>
-
-    <!-- CTA -->
-    <div class="buttons">
-      <a href="#projects" class="btn-primary">View my work</a>
-      <a href="#contact" class="btn-secondary">Get in touch</a>
-    </div>
-
-    <!-- TODO: add your CV as files/CV-Freem-Beaud.pdf, then remove the comment around this block
-    <div class="download-bouton">
-      <a href="files/CV-Freem-Beaud.pdf" class="btn-download" download>
-        <img src="images/download.svg" data-light="images/download.svg" data-dark="images/download-dark.svg" alt="" width="23" height="23" />
-        <span class="text-main">Download my</span>
-        <span class="text-accent">CV</span>
-      </a>
-    </div>
-    -->
-  </div>
-
-  <div class="hero-image">
-    <img src="images/profil.jpeg" alt="Portrait of Mr. Freem" width="280" height="420" />
-  </div>
-</section>
-
-
-<!-- SKILLS -->
-<section id="skills" class="skills">
-  <h2>Skills &amp; Expertise</h2>
-
-  <div class="skill-grid">
-    <div class="skill-card">
-      <h3>Development</h3>
-      <ul>
-        <li>Web Development (HTML, CSS, JavaScript)</li>
-        <li>Java</li>
-        <li>C#</li>
-        <li>React (learning)</li>
-        <li>Git &amp; GitHub</li>
+      <ul class="socials" aria-label="Elsewhere">
+        <li>
+          <a href="https://github.com/MrFreem3122" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.53-1.33-1.28-1.69-1.28-1.69-1.05-.71.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.68 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.83 1.19 3.09 0 4.41-2.69 5.38-5.25 5.67.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5z"/></svg>
+            GitHub
+          </a>
+        </li>
+        <!-- TODO: add your LinkedIn URL and uncomment
+        <li><a href="https://www.linkedin.com/in/YOUR_PROFILE" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+        -->
+        <!-- TODO: add your CV at files/CV-Freem-Beaud.pdf and uncomment
+        <li><a href="files/CV-Freem-Beaud.pdf" download>Download CV</a></li>
+        -->
       </ul>
     </div>
 
-    <div class="skill-card">
-      <h3>E-commerce</h3>
-      <ul>
-        <li>Product sourcing (Alibaba, suppliers)</li>
-        <li>Shopify store setup</li>
-        <li>Meta Ads (Facebook &amp; Instagram)</li>
-        <li>Product testing &amp; validation</li>
-        <li>Order &amp; customer management</li>
-      </ul>
+    <div class="hero-portrait">
+      <div class="disc" aria-hidden="true"></div>
+      <div class="photo-clip"><img src="images/profil.jpeg" alt="Portrait of Freem" width="1024" height="1536" /></div>
     </div>
+  </section>
 
-    <div class="skill-card">
-      <h3>Business</h3>
-      <ul>
-        <li>Online business fundamentals</li>
-        <li>Pricing &amp; offer positioning</li>
-        <li>Basic marketing strategy</li>
-        <li>Problem-solving mindset</li>
-        <li>Project planning</li>
-      </ul>
+  <!-- WORK -->
+  <section class="work container" id="work" aria-labelledby="work-title">
+    <h2 id="work-title">Selected work</h2>
+
+    <ol class="project-list">
+
+      <li class="project">
+        <div class="project-main">
+          <h3>GagdetTrend241</h3>
+          <p>An online gadget store for customers in Gabon. Product catalogue, cart and checkout built in Next.js, with orders stored in a Postgres database. An admin dashboard for orders, stock and deliveries is next.</p>
+        </div>
+        <dl class="project-meta">
+          <div><dt>Type</dt><dd>My own business</dd></div>
+          <div><dt>Built with</dt><dd>Next.js, PostgreSQL (Neon), Vercel</dd></div>
+          <div><dt>Status</dt><dd><span class="status status-live">Test version online</span></dd></div>
+        </dl>
+        <div class="project-links">
+          <a href="https://gagdettrend241-tgey.vercel.app/" target="_blank" rel="noopener noreferrer">Visit the store</a>
+        </div>
+      </li>
+
+      <li class="project">
+        <div class="project-main">
+          <h3>RaceDay</h3>
+          <p>A race event platform: an ASP.NET Core Web API with an MVC front end. Users create events and upload profile photos, which are stored in Azure Blob Storage. The whole stack runs in Docker, with automated builds on GitHub.</p>
+        </div>
+        <dl class="project-meta">
+          <div><dt>Type</dt><dd>University project</dd></div>
+          <div><dt>Built with</dt><dd>C#, ASP.NET Core, MVC, Azure Blob Storage, Docker</dd></div>
+          <div><dt>Status</dt><dd><span class="status">Completed</span></dd></div>
+        </dl>
+        <div class="project-links">
+          <a href="https://github.com/ST10497592/RaceDay" target="_blank" rel="noopener noreferrer">View the code</a>
+        </div>
+      </li>
+
+      <li class="project">
+        <div class="project-main">
+          <h3>Multiplayer quiz</h3>
+          <p>A real-time quiz game. A host creates a session, players join with a unique code, and answers and scores update live for everyone.</p>
+        </div>
+        <dl class="project-meta">
+          <div><dt>Type</dt><dd>Personal project</dd></div>
+          <div><dt>Built with</dt><dd>JavaScript, Node.js, WebSockets</dd></div>
+          <div><dt>Status</dt><dd><span class="status">Completed</span></dd></div>
+        </dl>
+        <div class="project-links">
+          <!-- TODO: replace with the quiz repository link -->
+          <a href="https://github.com/MrFreem3122" target="_blank" rel="noopener noreferrer">View on GitHub</a>
+        </div>
+      </li>
+
+      <li class="project">
+        <div class="project-main">
+          <h3>Embroidered hoodies store</h3>
+          <p>A storefront to showcase and sell embroidered hoodies, built for a school project with plain HTML, CSS and JavaScript.</p>
+        </div>
+        <dl class="project-meta">
+          <div><dt>Type</dt><dd>School project</dd></div>
+          <div><dt>Built with</dt><dd>HTML, CSS, JavaScript</dd></div>
+          <div><dt>Status</dt><dd><span class="status">Completed</span></dd></div>
+        </dl>
+      </li>
+
+      <li class="project">
+        <div class="project-main">
+          <h3>Product testing with Meta Ads</h3>
+          <p>Small ad campaigns on Facebook and Instagram to check whether people actually want a product before buying stock.</p>
+        </div>
+        <dl class="project-meta">
+          <div><dt>Type</dt><dd>E-commerce</dd></div>
+          <div><dt>Built with</dt><dd>Meta Ads, Meta Business Suite</dd></div>
+          <div><dt>Status</dt><dd><span class="status">Ongoing</span></dd></div>
+        </dl>
+      </li>
+
+    </ol>
+  </section>
+
+  <!-- SKILLS -->
+  <section class="skills container" id="skills" aria-labelledby="skills-title">
+    <h2 id="skills-title">What I work with</h2>
+
+    <div class="skill-columns">
+      <div>
+        <h3>Code</h3>
+        <ul>
+          <li>C# &amp; ASP.NET Core (API, MVC)</li>
+          <li>JavaScript, Next.js, React</li>
+          <li>Java</li>
+          <li>HTML &amp; CSS</li>
+          <li>SQL &amp; PostgreSQL</li>
+          <li>Docker, Azure, Git &amp; GitHub</li>
+        </ul>
+      </div>
+      <div>
+        <h3>E-commerce</h3>
+        <ul>
+          <li>Product sourcing (Alibaba, suppliers)</li>
+          <li>Shopify store setup</li>
+          <li>Meta Ads (Facebook &amp; Instagram)</li>
+          <li>Testing and validating products</li>
+          <li>Orders and customer service</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Design &amp; tools</h3>
+        <ul>
+          <li>Figma (UI mockups)</li>
+          <li>Canva</li>
+          <li>Notion</li>
+          <li>Meta Business Suite</li>
+        </ul>
+      </div>
     </div>
+  </section>
 
-    <div class="skill-card">
-      <h3>Product &amp; Tools</h3>
-      <ul>
-        <li>Figma (UI mockups)</li>
-        <li>Canva</li>
-        <li>Notion</li>
-        <li>Meta Business Suite</li>
-      </ul>
+  <!-- CONTACT -->
+  <section class="contact" id="contact" aria-labelledby="contact-title">
+    <div class="container contact-inner">
+      <div class="contact-copy">
+        <h2 id="contact-title">Let's work together.</h2>
+        <p>Have a project, an internship or a question? Write to me directly or use the form.</p>
+        <a class="contact-email" href="mailto:contact.mrfreem@gmail.com">contact.mrfreem@gmail.com</a>
+      </div>
+
+      <form class="contact-form" id="contactForm" novalidate>
+        <div class="field">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" autocomplete="name" required />
+        </div>
+        <div class="field">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" autocomplete="email" required />
+        </div>
+        <div class="field">
+          <label for="subject">Subject <span class="optional">(optional)</span></label>
+          <input type="text" id="subject" name="subject" />
+        </div>
+        <div class="field">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" required></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-solid" id="sendBtn">Send message</button>
+        <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+      </form>
     </div>
-  </div>
-</section>
-
-<!-- PROJECTS -->
-<section id="projects" class="projects">
-  <h2>Featured Projects</h2>
-
-  <div class="projects-grid">
-
-    <article class="project-card">
-      <!-- Add a screenshot at images/quiz-project.png — until then a placeholder is shown -->
-      <div class="project-image" data-label="Quiz App">
-        <img src="images/quiz-project.png" alt="Screenshot of the multiplayer quiz app" loading="lazy" />
-      </div>
-
-      <h3>Multiplayer Quiz Web Application</h3>
-      <p>Real-time quiz web application where a game master creates a session and players join using a unique code.</p>
-
-      <div class="tech">
-        <span>HTML</span>
-        <span>CSS</span>
-        <span>JavaScript</span>
-        <span>Node.js</span>
-        <span>WebSockets</span>
-      </div>
-
-      <!-- TODO: replace the href with the project's GitHub repo or live demo -->
-      <a class="btn-primary project-link" href="https://github.com/MrFreem3122" target="_blank" rel="noopener noreferrer">View on GitHub</a>
-    </article>
-
-    <article class="project-card">
-      <div class="project-image" data-label="Product Testing">
-        <img src="images/product-testing.png" alt="Ads dashboard from the product testing campaign" loading="lazy" />
-      </div>
-
-      <h3>E-commerce Product Testing</h3>
-      <p>Ran Meta Ads campaigns to validate product demand before investing in stock and scaling.</p>
-
-      <div class="tech">
-        <span>Meta Ads</span>
-        <span>Business Suite</span>
-      </div>
-    </article>
-
-    <article class="project-card">
-      <div class="project-image" data-label="Hoodies Store">
-        <img src="images/hoodies-store.png" alt="Homepage of the embroidered hoodies store" loading="lazy" />
-      </div>
-
-      <h3>Embroidered Hoodies E-commerce Website</h3>
-      <p>E-commerce website built for a school project to showcase and sell embroidered hoodies.</p>
-
-      <div class="tech">
-        <span>HTML</span>
-        <span>CSS</span>
-        <span>JavaScript</span>
-      </div>
-
-      <!-- TODO: replace the href with the project's GitHub repo or live demo -->
-      <a class="btn-primary project-link" href="https://github.com/MrFreem3122" target="_blank" rel="noopener noreferrer">View on GitHub</a>
-    </article>
-
-  </div>
-</section>
-
-
-<!-- CONTACT -->
-<section id="contact" class="contact">
-  <h2>Contact Me</h2>
-
-  <form class="contact-form" id="contactForm" novalidate>
-    <label class="sr-only" for="name">Name</label>
-    <input type="text" id="name" name="name" placeholder="Name" autocomplete="name" required />
-
-    <label class="sr-only" for="email">Email</label>
-    <input type="email" id="email" name="email" placeholder="Email" autocomplete="email" required />
-
-    <label class="sr-only" for="subject">Subject</label>
-    <input type="text" id="subject" name="subject" placeholder="Subject" />
-
-    <label class="sr-only" for="message">Message</label>
-    <textarea id="message" name="message" placeholder="Message" required></textarea>
-
-    <button type="submit" class="btn-primary" id="sendBtn">Send Message ✉️</button>
-
-    <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
-  </form>
-</section>
+  </section>
 
 </main>
 
-<footer class="footer">
-  <p>© <span id="year"></span> Mr. Freem · Built with HTML, CSS &amp; JavaScript</p>
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <p>© <span id="year"></span> Mr. Freem</p>
+    <a href="#top">Back to top</a>
+  </div>
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 <script src="js/main.js"></script>
-
 </body>
 </html>
