@@ -4,11 +4,11 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>RaceDay — Mr. Freem</title>
-  <meta name="description" content="A race event platform built in three parts for my PROG6212 module: a REST API, an MVC web app, and cloud storage, all running in Docker." />
+  <meta name="description" content="A sports event management platform. Organisers publish running, walking and cycling events; participants browse them, enrol and follow their results." />
   <meta name="theme-color" content="#ffffff" />
   <meta property="og:type" content="article" />
   <meta property="og:title" content="RaceDay — Mr. Freem" />
-  <meta property="og:description" content="A race event platform built in three parts for my PROG6212 module: a REST API, an MVC web app, and cloud storage, all running in Docker." />
+  <meta property="og:description" content="A sports event management platform. Organisers publish running, walking and cycling events; participants browse them, enrol and follow their results." />
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><circle cx='32' cy='32' r='32' fill='%23F7CB48'/><text x='50%' y='56%' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-weight='700' font-size='34' fill='%2316181d'>F</text></svg>" />
   <script>
     (function () {
@@ -50,11 +50,11 @@
 
   <header class="case-header">
     <h1>RaceDay</h1>
-    <p class="lede">A race event platform built in three parts for my PROG6212 module: a REST API, an MVC web app, and cloud storage, all running in Docker.</p>
+    <p class="lede">A sports event management platform. Organisers publish running, walking and cycling events; participants browse them, enrol and follow their results.</p>
 
     <dl class="case-meta">
-      <div><dt>Type</dt><dd>University project</dd></div>
-      <div><dt>Built with</dt><dd>C#, ASP.NET Core Web API, ASP.NET Core MVC, Azure Blob Storage, Docker</dd></div>
+      <div><dt>Type</dt><dd>University project (PROG6212)</dd></div>
+      <div><dt>Built with</dt><dd>C#, ASP.NET Core 8 (Web API and MVC), EF Core, SQL Server, Azure Blob Storage, Docker</dd></div>
       <div><dt>Status</dt><dd><span class="status">Completed</span></dd></div>
     </dl>
 
@@ -68,22 +68,34 @@
     <img src="../images/projects/raceday.jpg" alt="Screenshot of RaceDay" />
   </div>
 
+  <div class="gallery">
+    <figure>
+      <img src="../images/projects/raceday-dashboard.jpg" alt="Organiser dashboard with event and enrolment statistics" loading="lazy" />
+      <figcaption>Organiser dashboard with event and enrolment statistics</figcaption>
+    </figure>
+    <figure>
+      <img src="../images/projects/raceday-events.jpg" alt="Browse events page with search and filters" loading="lazy" />
+      <figcaption>Browse events page with search and filters</figcaption>
+    </figure>
+  </div>
+
   <div class="case-body">
       <section class="case-section">
         <h2>About the project</h2>
-        <p>RaceDay lets users create and manage race events. The project was built in three stages: first the ASP.NET Core Web API that holds the data and business rules, then an MVC web application that talks to the API, and finally cloud storage and containers.</p>
-        <p>Profile photos are uploaded to Azure Blob Storage, and the full stack starts with a single docker compose command. Every change pushed to GitHub is built automatically.</p>
+        <p>RaceDay has two kinds of users. Organisers get a dashboard to create events, manage categories, review enrolments and record results. Participants browse and search events, enrol in a category, and see their own results, such as 47th out of 312 finishers.</p>
+        <p>The solution is split into an ASP.NET Core Web API, which owns the database and the business rules, and an MVC web app that only talks to that API. Images such as profile pictures and event banners go through the API to Azure Blob Storage. The whole stack, including SQL Server and a local Azure emulator, starts with one docker compose command.</p>
       </section>
 
       <section class="case-section">
         <h2>What I built</h2>
         <ul class="checklist">
-          <li>REST API with ASP.NET Core Web API</li>
-          <li>Web front end with ASP.NET Core MVC</li>
-          <li>Event creation and management</li>
-          <li>Profile photo upload to Azure Blob Storage</li>
-          <li>Docker and docker compose setup for the whole stack</li>
-          <li>Automated builds on GitHub</li>
+          <li>REST API with JWT sign-in and role-based access for organisers and participants</li>
+          <li>MVC web app with a sidebar console for organisers and a top navigation for participants</li>
+          <li>Events, categories, enrolments (pending, confirmed, cancelled) and results</li>
+          <li>Image uploads to Azure Blob Storage, checked for type and size by the API</li>
+          <li>Organiser sign-up protected by a secret access code checked on the server</li>
+          <li>Unit and integration tests with xUnit, run by GitHub Actions on every push</li>
+          <li>Docker Compose setup with SQL Server, Azurite, the API and the web app</li>
         </ul>
       </section>
   </div>
