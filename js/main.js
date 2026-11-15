@@ -13,11 +13,12 @@ const themeBtn = document.getElementById("themeToggle");
 function syncThemeButton() {
   const isDark = root.classList.contains("dark");
   themeBtn.setAttribute("aria-pressed", String(isDark));
-  themeBtn.setAttribute("aria-label", isDark ? "Switch to light mode" : "Switch to dark mode");
+  themeBtn.setAttribute("aria-label", t(isDark ? "Switch to light mode" : "Switch to dark mode"));
   document.querySelector('meta[name="theme-color"]').setAttribute("content", isDark ? "#121316" : "#ffffff");
 }
 
 syncThemeButton();
+document.addEventListener("languagechange", syncThemeButton);
 
 themeBtn.addEventListener("click", () => {
   root.classList.toggle("dark");
@@ -52,7 +53,6 @@ const form = document.getElementById("contactForm");
 if (form) {
   const btn = document.getElementById("sendBtn");
   const status = document.getElementById("formStatus");
-  const BTN_LABEL = btn.textContent;
 
   function setStatus(message, type) {
     status.textContent = message;
@@ -72,27 +72,27 @@ if (form) {
     }
 
     if (!window.emailjs) {
-      setStatus("The form couldn't load. Email me at contact.mrfreem@gmail.com instead.", "error");
+      setStatus(t("The form couldn't load. Email me at contact.mrfreem@gmail.com instead."), "error");
       return;
     }
 
     btn.disabled = true;
-    btn.textContent = "Sending…";
+    btn.textContent = t("Sending…");
     setStatus("");
 
     emailjs
       .sendForm(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, form)
       .then(() => {
-        setStatus("Message sent. I'll reply by email soon.", "success");
+        setStatus(t("Message sent. I'll reply by email soon."), "success");
         form.reset();
       })
       .catch((error) => {
         console.error("EmailJS error:", error);
-        setStatus("Message not sent. Check your connection and try again, or email me directly.", "error");
+        setStatus(t("Message not sent. Check your connection and try again, or email me directly."), "error");
       })
       .finally(() => {
         btn.disabled = false;
-        btn.textContent = BTN_LABEL;
+        btn.textContent = t("Send message");
       });
   });
 }
