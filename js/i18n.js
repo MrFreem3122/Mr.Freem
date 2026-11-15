@@ -174,6 +174,40 @@ const FR = {
   "Docker Compose setup with SQL Server, Azurite, the API and the web app":
     "Configuration Docker Compose avec SQL Server, Azurite, l'API et l'application web",
 
+
+  /* ---------- Loup-Garou gabonais ---------- */
+  "Loup-Garou gabonais | Mr. Freem": "Loup-Garou gabonais | Mr. Freem",
+  "A Werewolf-style deduction game for 4 to 10 friends, set in a Gabonese neighbourhood. Everyone plays from their own phone with a code shared on WhatsApp.":
+    "Un jeu de déduction façon Loup-Garou, de 4 à 10 amis, dans un quartier gabonais. Chacun joue depuis son téléphone avec un code partagé sur WhatsApp.",
+  "JavaScript, Node.js, WebSockets, HTML, CSS, Render": "JavaScript, Node.js, WebSockets, HTML, CSS, Render",
+  "Home page, a secret role card and the anonymous night chat": "L'accueil, une carte de rôle secret et le chat de nuit anonyme",
+  "Electing the neighbourhood chief, the Ndoki choosing a victim at night, and the morning announcement":
+    "L'élection du Chef de quartier, les Ndoki qui choisissent leur victime la nuit, et l'annonce du matin",
+  "Electing the chief, the Ndoki's private channel at night, then the morning announcement":
+    "L'élection du Chef, le canal privé des Ndoki la nuit, puis l'annonce du matin",
+  "The debate at the maquis, the live vote and the end of the game": "Le débat au maquis, le vote en direct et la fin de partie",
+  "The debate at the maquis, the live vote, then the end of the game with every role revealed":
+    "Le débat au maquis, le vote en direct, puis la fin de partie avec tous les rôles révélés",
+  "I made this game for our community so we can play Werewolf together even when everyone is at home, or in another country. The village is a Gabonese neighbourhood: the Ndoki eat a neighbour every night, the Nganga reads the spirits, the Policeman takes someone \"to the station\" and the debates happen at the maquis.":
+    "J'ai créé ce jeu pour notre communauté, pour jouer au Loup-Garou ensemble même quand chacun est chez soi, ou dans un autre pays. Le village est un quartier gabonais : les Ndoki mangent un voisin chaque nuit, le Nganga consulte les esprits, le Policier emmène quelqu'un « au poste » et les débats se tiennent au maquis.",
+  "I wrote the gameplay document, designed the screens, then built the game. The server keeps every secret: each phone only receives what its player is allowed to see, and the link between the anonymous night names and the real players is only revealed in each player's private summary at the end.":
+    "J'ai écrit le document de gameplay, dessiné les écrans, puis développé le jeu. Le serveur garde tous les secrets : chaque téléphone ne reçoit que ce que son joueur a le droit de voir, et le lien entre les pseudos anonymes de la nuit et les vrais joueurs n'apparaît que dans le bilan privé de chacun, à la fin.",
+  "Real-time rooms over WebSockets, with a server written from scratch and no dependencies":
+    "Parties en temps réel avec WebSockets, sur un serveur écrit de zéro et sans dépendance",
+  "Eight roles with night powers, a neighbourhood chief elected by the players, and three ways to win":
+    "Huit rôles avec des pouvoirs de nuit, un Chef de quartier élu par les joueurs et trois façons de gagner",
+  "An anonymous night chat where everyone writes under a random neighbourhood name":
+    "Un chat de nuit anonyme où chacun écrit sous un pseudo de quartier tiré au hasard",
+  "A live vote where every change of mind is shown, with ties settled by the chief":
+    "Un vote en direct où chaque changement d'avis s'affiche, avec les égalités tranchées par le Chef",
+  "A private end-of-game summary that disappears when the last player leaves":
+    "Un bilan de fin de partie privé, qui disparaît quand le dernier joueur s'en va",
+  "Bots that play full games to test every rule automatically":
+    "Des robots qui jouent des parties complètes pour tester chaque règle automatiquement",
+  "A Werewolf-style game for friends, set in a Gabonese neighbourhood, played live from every phone.":
+    "Un Loup-Garou entre amis dans un quartier gabonais, joué en direct depuis chaque téléphone.",
+  "Game design": "Game design",
+
   /* ---------- texts set by main.js ---------- */
   "Switch to dark mode": "Passer en mode sombre",
   "Switch to light mode": "Passer en mode clair",
