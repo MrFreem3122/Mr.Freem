@@ -929,19 +929,27 @@ ol {
   }
 }
 
-/* Small phones: the language and theme buttons no longer fit beside the links,
-   so the links go and the page is read by scrolling */
+/* Small phones: the links move to a second row under the name and the buttons */
 @media (max-width: 480px) {
-  .nav {
-    display: none;
+  :root {
+    --header-h: 100px;
   }
 
-  .header-tools {
-    margin-left: auto;
+  .header-inner {
+    flex-wrap: wrap;
+    align-content: center;
+    column-gap: 12px;
+    row-gap: 10px;
   }
 
   .brand {
     white-space: nowrap;
+  }
+
+  .nav {
+    order: 3;
+    width: 100%;
+    gap: 22px;
   }
 }
 
