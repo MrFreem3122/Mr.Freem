@@ -968,7 +968,8 @@ ol {
 
 /* ================= PROJECT GALLERY ================= */
 
-.gallery figure:only-child {
+.gallery figure:only-child,
+.gallery figure:last-child:nth-child(odd) {
   grid-column: 1 / -1;
 }
 

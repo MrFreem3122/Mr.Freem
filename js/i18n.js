@@ -188,8 +188,16 @@ const FR = {
   "The debate at the maquis, the live vote and the end of the game": "Le débat au maquis, le vote en direct et la fin de partie",
   "The debate at the maquis, the live vote, then the end of the game with every role revealed":
     "Le débat au maquis, le vote en direct, puis la fin de partie avec tous les rôles révélés",
-  "I made this game for our community so we can play Werewolf together even when everyone is at home, or in another country. The village is a Gabonese neighbourhood: the Ndoki eat a neighbour every night, the Nganga reads the spirits, the Policeman takes someone \"to the station\" and the debates happen at the maquis.":
-    "J'ai créé ce jeu pour notre communauté, pour jouer au Loup-Garou ensemble même quand chacun est chez soi, ou dans un autre pays. Le village est un quartier gabonais : les Ndoki mangent un voisin chaque nuit, le Nganga consulte les esprits, le Policier emmène quelqu'un « au poste » et les débats se tiennent au maquis.",
+  "I made this game for our community so we can play Werewolf together even when everyone is at home, or in another country. The village is a Gabonese neighbourhood: the Ndoki eat a neighbour every night, the Nganga reads the spirits, the Policeman takes someone \"to the station\" and the debates happen at the maquis. Since the first version I added a Pyromane who burns houses, a secte that converts players with promises of riches, and a Femme de nuit who picks a husband for the night.":
+    "J'ai créé ce jeu pour notre communauté, pour jouer au Loup-Garou ensemble même quand chacun est chez soi, ou dans un autre pays. Le village est un quartier gabonais : les Ndoki mangent un voisin chaque nuit, le Nganga consulte les esprits, le Policier emmène quelqu'un « au poste » et les débats se tiennent au maquis. Depuis la première version, j'ai ajouté un Pyromane qui brûle des maisons, une secte qui achète les joueurs en leur promettant la richesse, et une Femme de nuit qui se choisit un mari de nuit.",
+  "The role cards of the new roles: Chasseur, Chauffeur, Ivrogne, Pyromane, the Rose-Croix secte and the Femme de nuit":
+    "Les cartes des nouveaux rôles : Chasseur, Chauffeur, Ivrogne, Pyromane, la secte des Rose-Croix et la Femme de nuit",
+  "New roles: the Chasseur, the Chauffeur, the Ivrogne, the Pyromane, the Rose-Croix secte and the Femme de nuit":
+    "Les nouveaux rôles : le Chasseur, le Chauffeur, l'Ivrogne, le Pyromane, la secte des Rose-Croix et la Femme de nuit",
+  "Fifteen roles in five camps: the village, the Ndoki, a lone Pyromane, the Rose-Croix secte that buys players with riches, and a night couple":
+    "Quinze rôles dans cinq camps : le village, les Ndoki, un Pyromane solitaire, la secte des Rose-Croix qui achète les joueurs avec la richesse, et un couple de nuit",
+  "A neighbourhood chief elected by the players, and a last shot for the Chasseur when he dies":
+    "Un Chef de quartier élu par les joueurs, et un dernier coup de fusil pour le Chasseur quand il meurt",
   "I wrote the gameplay document, designed the screens, then built the game. The server keeps every secret: each phone only receives what its player is allowed to see, and the link between the anonymous night names and the real players is only revealed in each player's private summary at the end.":
     "J'ai écrit le document de gameplay, dessiné les écrans, puis développé le jeu. Le serveur garde tous les secrets : chaque téléphone ne reçoit que ce que son joueur a le droit de voir, et le lien entre les pseudos anonymes de la nuit et les vrais joueurs n'apparaît que dans le bilan privé de chacun, à la fin.",
   "Real-time rooms over WebSockets, with a server written from scratch and no dependencies":
