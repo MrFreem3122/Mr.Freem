@@ -255,6 +255,8 @@ const FR = {
     "Mises à jour en direct sur l'écran du vendeur, et tests de bout en bout de chaque parcours",
   "An order manager for online sellers: WhatsApp, Shopify and WooCommerce orders, paid by Mobile Money.":
     "Un gestionnaire de commandes pour vendeurs en ligne : commandes WhatsApp, Shopify et WooCommerce, payées par Mobile Money.",
+  "For custom-built websites: \"Order\" buttons to paste without code, and an API with signed webhooks for the developer":
+    "Pour les sites faits sur mesure : des boutons « Commander » à coller sans code, et une API avec des webhooks signés pour le développeur",
   "Shopify API": "API Shopify",
   "Mobile Money": "Mobile Money",
 
