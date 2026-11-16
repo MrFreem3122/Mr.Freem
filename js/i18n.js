@@ -216,6 +216,48 @@ const FR = {
     "Un Loup-Garou entre amis dans un quartier gabonais, joué en direct depuis chaque téléphone.",
   "Game design": "Game design",
 
+
+  /* ---------- Livra ---------- */
+  "Livra | Mr. Freem": "Livra | Mr. Freem",
+  "An order manager for online sellers in Gabon: orders from WhatsApp, Shopify and WooCommerce in one place, paid by Airtel Money or Moov Money.":
+    "Un gestionnaire de commandes pour les vendeurs en ligne au Gabon : les commandes WhatsApp, Shopify et WooCommerce au même endroit, payées par Airtel Money ou Moov Money.",
+  "Product for online sellers": "Produit pour vendeurs en ligne",
+  "JavaScript, Node.js, Shopify and WooCommerce APIs, Mobile Money, Render": "JavaScript, Node.js, API Shopify et WooCommerce, Mobile Money, Render",
+  "Online demo": "Démo en ligne",
+  "Try the demo": "Essayer la démo",
+  "The seller's order list, one order with its progress, and the Mobile Money payment request":
+    "La liste des commandes du vendeur, une commande et son avancement, et la demande de paiement Mobile Money",
+  "The customer's catalogue, the Airtel Money or Moov Money payment page and the payment received":
+    "Le catalogue du client, la page de paiement Airtel Money ou Moov Money et le paiement reçu",
+  "The customer's side: the catalogue shared on WhatsApp, then the payment by Airtel Money or Moov Money":
+    "Côté client : le catalogue partagé sur WhatsApp, puis le paiement par Airtel Money ou Moov Money",
+  "The order table on a computer, with amounts to collect, paid today and cash held by couriers":
+    "Le tableau des commandes sur ordinateur, avec ce qui reste à encaisser, ce qui est payé aujourd'hui et le cash chez les livreurs",
+  "The same orders on a computer, with what is left to collect and the cash held by each courier":
+    "Les mêmes commandes sur ordinateur, avec ce qui reste à encaisser et le cash chez chaque livreur",
+  "In Gabon, many shops sell on WhatsApp and Instagram, and some on Shopify. Orders get lost in conversations, nobody knows exactly who has paid, and the cash collected by couriers is hard to follow. Livra puts every order in one list, sends the customer a payment link on WhatsApp, and marks the order paid as soon as the payment is confirmed.":
+    "Au Gabon, beaucoup de boutiques vendent sur WhatsApp et Instagram, et certaines sur Shopify. Les commandes se perdent dans les discussions, on ne sait plus exactement qui a payé, et le cash récupéré par les livreurs est difficile à suivre. Livra met toutes les commandes dans une seule liste, envoie au client un lien de paiement sur WhatsApp et marque la commande payée dès que le paiement est confirmé.",
+  "Shopify does not let a new payment method into its own checkout without a special partnership. So the seller adds a manual \"Mobile Money\" method; Livra receives the order, the customer pays through a Mobile Money aggregator, and Livra marks the order paid in Shopify. The demo uses a fictional shop and simulated payments.":
+    "Shopify n'accepte pas un nouveau moyen de paiement dans son propre paiement sans partenariat spécial. Le vendeur ajoute donc un moyen de paiement manuel « Mobile Money » ; Livra reçoit la commande, le client paie via un agrégateur Mobile Money, et Livra marque la commande payée dans Shopify. La démo utilise une boutique fictive et des paiements simulés.",
+  "One list for every order, with a clear status: waiting for payment, paid, out for delivery, delivered":
+    "Une seule liste pour toutes les commandes, avec un statut clair : attend le paiement, payée, en livraison, livrée",
+  "A payment link sent on WhatsApp, with Airtel Money or Moov Money detected from the phone number":
+    "Un lien de paiement envoyé sur WhatsApp, avec Airtel Money ou Moov Money détecté depuis le numéro",
+  "A catalogue customers order from, and orders received by message added in a few seconds":
+    "Un catalogue où les clients commandent, et les commandes reçues par message ajoutées en quelques secondes",
+  "Cash on delivery, couriers, and the cash each courier still has to hand over":
+    "Le paiement à la livraison, les livreurs, et le cash que chaque livreur doit encore rendre",
+  "Shopify and WooCommerce connections through signed webhooks, and a Moneroo payment connection":
+    "Connexions Shopify et WooCommerce par webhooks signés, et branchement du paiement Moneroo",
+  "An order is marked paid only when the payment provider confirms it, with the amount checked":
+    "Une commande n'est marquée payée que sur confirmation du fournisseur de paiement, avec le montant vérifié",
+  "Live updates on the seller's screen, and end-to-end tests of every flow":
+    "Mises à jour en direct sur l'écran du vendeur, et tests de bout en bout de chaque parcours",
+  "An order manager for online sellers: WhatsApp, Shopify and WooCommerce orders, paid by Mobile Money.":
+    "Un gestionnaire de commandes pour vendeurs en ligne : commandes WhatsApp, Shopify et WooCommerce, payées par Mobile Money.",
+  "Shopify API": "API Shopify",
+  "Mobile Money": "Mobile Money",
+
   /* ---------- texts set by main.js ---------- */
   "Switch to dark mode": "Passer en mode sombre",
   "Switch to light mode": "Passer en mode clair",

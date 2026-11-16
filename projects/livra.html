@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Livra | Mr. Freem</title>
+  <meta name="description" content="An order manager for online sellers in Gabon: orders from WhatsApp, Shopify and WooCommerce in one place, paid by Airtel Money or Moov Money." />
+  <meta name="theme-color" content="#ffffff" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Livra | Mr. Freem" />
+  <meta property="og:description" content="An order manager for online sellers in Gabon: orders from WhatsApp, Shopify and WooCommerce in one place, paid by Airtel Money or Moov Money." />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><circle cx='32' cy='32' r='32' fill='%23F7CB48'/><text x='50%' y='56%' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-weight='700' font-size='34' fill='%2316181d'>F</text></svg>" />
+  <script>
+    (function () {
+      try {
+        var saved = localStorage.getItem("theme");
+        if (saved === "dark" || (!saved && matchMedia("(prefers-color-scheme: dark)").matches)) {
+          document.documentElement.classList.add("dark");
+        }
+        var lang = localStorage.getItem("lang") || ((navigator.language || "").toLowerCase().indexOf("fr") === 0 ? "fr" : "en");
+        if (lang === "fr") {
+          document.documentElement.classList.add("i18n-pending");
+          setTimeout(function () { document.documentElement.classList.remove("i18n-pending"); }, 1500);
+        }
+      } catch (e) {}
+    })();
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="../index.html">Mr. Freem</a>
+    <nav class="nav" aria-label="Main navigation">
+      <a href="../index.html#work">Work</a>
+      <a href="../index.html#skills">Skills</a>
+      <a href="../index.html#contact">Contact</a>
+    </nav>
+    <div class="header-tools">
+      <button type="button" class="lang-btn" id="langToggle" lang="fr" aria-label="Voir le site en français">FR</button>
+      <button type="button" class="theme-btn" id="themeToggle" aria-label="Switch to dark mode" aria-pressed="false">
+      <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+      <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.5"/><path d="M12 1.5v3M12 19.5v3M4.6 4.6l2.1 2.1M17.3 17.3l2.1 2.1M1.5 12h3M19.5 12h3M4.6 19.4l2.1-2.1M17.3 6.7l2.1-2.1"/></svg>
+    </button>
+    </div>
+  </div>
+</header>
+
+<main id="main" class="case container">
+
+  <a class="back-link" href="../index.html#work">All projects</a>
+
+  <header class="case-header">
+    <h1>Livra</h1>
+    <p class="lede">An order manager for online sellers in Gabon: orders from WhatsApp, Shopify and WooCommerce in one place, paid by Airtel Money or Moov Money.</p>
+
+    <dl class="case-meta">
+      <div><dt>Type</dt><dd>Product for online sellers</dd></div>
+      <div><dt>Built with</dt><dd>JavaScript, Node.js, Shopify and WooCommerce APIs, Mobile Money, Render</dd></div>
+      <div><dt>Status</dt><dd><span class="status status-live">Online demo</span></dd></div>
+    </dl>
+
+      <div class="case-actions">
+        <a class="btn btn-solid" href="https://livra-al6r.onrender.com" target="_blank" rel="noopener noreferrer">Try the demo</a>
+        <a class="btn btn-ghost" href="https://github.com/MrFreem3122/Livra" target="_blank" rel="noopener noreferrer">View the code</a>
+      </div>
+  </header>
+
+    <div class="cover cover-large" data-label="Livra">
+    <img src="../images/projects/livra.jpg" alt="The seller's order list, one order with its progress, and the Mobile Money payment request" />
+  </div>
+
+  <div class="gallery">
+    <figure>
+      <img src="../images/projects/livra-client.jpg" alt="The customer's catalogue, the Airtel Money or Moov Money payment page and the payment received" loading="lazy" />
+      <figcaption>The customer's side: the catalogue shared on WhatsApp, then the payment by Airtel Money or Moov Money</figcaption>
+    </figure>
+    <figure>
+      <img src="../images/projects/livra-desktop.jpg" alt="The order table on a computer, with amounts to collect, paid today and cash held by couriers" loading="lazy" />
+      <figcaption>The same orders on a computer, with what is left to collect and the cash held by each courier</figcaption>
+    </figure>
+  </div>
+
+  <div class="case-body">
+      <section class="case-section">
+        <h2>About the project</h2>
+        <p>In Gabon, many shops sell on WhatsApp and Instagram, and some on Shopify. Orders get lost in conversations, nobody knows exactly who has paid, and the cash collected by couriers is hard to follow. Livra puts every order in one list, sends the customer a payment link on WhatsApp, and marks the order paid as soon as the payment is confirmed.</p>
+        <p>Shopify does not let a new payment method into its own checkout without a special partnership. So the seller adds a manual "Mobile Money" method; Livra receives the order, the customer pays through a Mobile Money aggregator, and Livra marks the order paid in Shopify. The demo uses a fictional shop and simulated payments.</p>
+      </section>
+
+      <section class="case-section">
+        <h2>What I built</h2>
+        <ul class="checklist">
+          <li>One list for every order, with a clear status: waiting for payment, paid, out for delivery, delivered</li>
+          <li>A payment link sent on WhatsApp, with Airtel Money or Moov Money detected from the phone number</li>
+          <li>A catalogue customers order from, and orders received by message added in a few seconds</li>
+          <li>Cash on delivery, couriers, and the cash each courier still has to hand over</li>
+          <li>Shopify and WooCommerce connections through signed webhooks, and a Moneroo payment connection</li>
+          <li>An order is marked paid only when the payment provider confirms it, with the amount checked</li>
+          <li>Live updates on the seller's screen, and end-to-end tests of every flow</li>
+        </ul>
+      </div>
+
+  <a class="next-project" href="gagdettrend241.html">
+    <span>Next project</span>
+    <strong>GadgetTrend 241</strong>
+  </a>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <p>© <span id="year"></span> Mr. Freem</p>
+    <a href="#main">Back to top</a>
+  </div>
+</footer>
+
+<script src="../js/i18n.js"></script>
+<script src="../js/main.js"></script>
+</body>
+</html>
