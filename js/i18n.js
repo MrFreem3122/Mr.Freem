@@ -177,8 +177,8 @@ const FR = {
 
   /* ---------- Loup-Garou gabonais ---------- */
   "Loup-Garou gabonais | Mr. Freem": "Loup-Garou gabonais | Mr. Freem",
-  "A Werewolf-style deduction game for 4 to 10 friends, set in a Gabonese neighbourhood. Everyone plays from their own phone with a code shared on WhatsApp.":
-    "Un jeu de déduction façon Loup-Garou, de 4 à 10 amis, dans un quartier gabonais. Chacun joue depuis son téléphone avec un code partagé sur WhatsApp.",
+  "A Werewolf-style deduction game for 4 to 20 friends, set in a Gabonese neighbourhood. Everyone plays from their own phone with a code shared on WhatsApp.":
+    "Un jeu de déduction façon Loup-Garou, de 4 à 20 amis, dans un quartier gabonais. Chacun joue depuis son téléphone avec un code partagé sur WhatsApp.",
   "JavaScript, Node.js, WebSockets, HTML, CSS, Render": "JavaScript, Node.js, WebSockets, HTML, CSS, Render",
   "Home page, a secret role card and the anonymous night chat": "L'accueil, une carte de rôle secret et le chat de nuit anonyme",
   "Electing the neighbourhood chief, the Ndoki choosing a victim at night, and the morning announcement":
