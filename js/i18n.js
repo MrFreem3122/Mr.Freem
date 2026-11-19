@@ -63,6 +63,26 @@ const FR = {
   "(optional)": "(facultatif)",
   "Message": "Message",
   "Send message": "Envoyer le message",
+  "I build websites and software for businesses. Every project starts with a free quote.":
+    "Je crée des sites et des logiciels pour les entreprises. Chaque projet commence par un devis gratuit.",
+  "Business website": "Site vitrine",
+  "A clean site that presents your business, with WhatsApp contact and visibility on Google.":
+    "Un site soigné qui présente votre activité, avec contact WhatsApp et visibilité sur Google.",
+  "From 150,000 FCFA": "Dès 150 000 FCFA",
+  "Online store": "Boutique en ligne",
+  "Catalogue, cart and orders, with an admin area to manage products, stock and deliveries.":
+    "Catalogue, panier et commandes, avec un espace admin pour gérer les produits, le stock et les livraisons.",
+  "From 400,000 FCFA": "Dès 400 000 FCFA",
+  "Web apps & software": "Applications web et logiciels",
+  "Booking systems, order managers, dashboards and apps that install on the phone.":
+    "Réservations, gestion des commandes, tableaux de bord et applis qui s'installent sur le téléphone.",
+  "From 900,000 FCFA": "Dès 900 000 FCFA",
+  "Maintenance": "Maintenance",
+  "Hosting, updates, backups and small changes, every month.":
+    "Hébergement, mises à jour, sauvegardes et petites modifications, chaque mois.",
+  "From 25,000 FCFA / month": "Dès 25 000 FCFA / mois",
+  "Get a quote on WhatsApp": "Demander un devis sur WhatsApp",
+  "Prices in FCFA, for clients in Gabon.": "Prix en FCFA, pour les clients au Gabon.",
 
   /* ---------- CleanRide ---------- */
   "CleanRide | Mr. Freem": "CleanRide | Mr. Freem",
